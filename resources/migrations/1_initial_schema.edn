@@ -1,0 +1,12 @@
+[
+ ;; Stuff
+ {:db/ident       :stuff/id
+  :db/valueType   :db.type/uuid
+  :db/cardinality :db.cardinality/one
+  :db/unique      :db.unique/identity
+  :db/doc         "id associated with an some stuff"}
+ {:db/ident       :stuff/count
+  :db/valueType   :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc         "The count of the stuff"}
+]

@@ -1,0 +1,5 @@
+{:allow [team-example-ion-api.handler/app]
+
+ :http-direct {:handler-fn team-example-ion-api.handler/app}
+
+ :app-name "team-ion-example"}

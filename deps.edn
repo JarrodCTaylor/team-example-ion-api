@@ -1,0 +1,23 @@
+{:paths ["src" "resources"]
+
+ :deps {org.clojure/clojure    {:mvn/version "1.10.1"}
+        org.clojure/test.check {:mvn/version "1.0.0"}
+        com.datomic/ion        {:mvn/version "1.0.59"}
+        metosin/reitit         {:mvn/version "0.4.2"}
+        javax.xml.bind/jaxb-api {:mvn/version "2.4.0-b180830.0359"}}
+
+ :mvn/repos {"datomic-cloud" {:url "s3://datomic-releases-1fc2183a/maven/releases"}}
+
+ :aliases {;; clojure -Adev
+           ; -------------------------------------------------------------------
+           :dev {:extra-deps {com.datomic/client-cloud {:mvn/version "1.0.120"}
+                              com.datomic/dev-local    {:mvn/version "1.0.243"}
+                              com.datomic/ion-dev      {:mvn/version "1.0.306"}}}
+           ;; clojure -Alocal-server
+           ; -------------------------------------------------------------------
+           :local-server {:extra-paths ["dev" "test"]
+                          :extra-deps {http-kit/http-kit        {:mvn/version "2.3.0"}
+                                       com.datomic/client-cloud {:mvn/version "1.0.120"}
+                                       com.datomic/dev-local    {:mvn/version "1.0.243"}
+                                       com.datomic/ion-dev      {:mvn/version "1.0.306"}}
+                          #_ #_ :main-opts ["-m" "local-server"]}}}

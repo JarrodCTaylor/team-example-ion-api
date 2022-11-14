@@ -1,0 +1,5 @@
+[
+ ;; stuff
+ {:stuff/id #uuid "e3067b04-9ef0-4613-8beb-e63832d9c025"
+  :stuff/count 42}
+]
